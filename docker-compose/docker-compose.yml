@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  web:
+    build: ./web
+    ports: 
+    - "8080:80"
+    volumes: 
+    - instagram:/usr/share/nginx/html
+  twitter:
+    build: ./twitter
+  instagram:
+    build: ./instagram
+    volumes: 
+    - instagram:/opt/instagram
+volumes:
+  instagram:
